@@ -1,0 +1,214 @@
+|TrafficLightSystem_SLOW
+GClock => clockdivider:u_div.clk_in
+GReset => clockdivider:u_div.reset
+GReset => debouncer_fast:u_db.reset
+GReset => fsm_controller:u_fsm.reset
+MSC[0] => maincounter:u_mc.limit[0]
+MSC[1] => maincounter:u_mc.limit[1]
+MSC[2] => maincounter:u_mc.limit[2]
+MSC[3] => maincounter:u_mc.limit[3]
+SSC[0] => sidecounter:u_sc.limit[0]
+SSC[1] => sidecounter:u_sc.limit[1]
+SSC[2] => sidecounter:u_sc.limit[2]
+SSC[3] => sidecounter:u_sc.limit[3]
+SSCS => debouncer_fast:u_db.noisy_in
+MSTL[0] <= fsm_controller:u_fsm.MSTL[0]
+MSTL[1] <= fsm_controller:u_fsm.MSTL[1]
+MSTL[2] <= fsm_controller:u_fsm.MSTL[2]
+SSTL[0] <= fsm_controller:u_fsm.SSTL[0]
+SSTL[1] <= fsm_controller:u_fsm.SSTL[1]
+SSTL[2] <= fsm_controller:u_fsm.SSTL[2]
+BCD1[0] <= bcd_decoder:u_bcd.BCD1[0]
+BCD1[1] <= bcd_decoder:u_bcd.BCD1[1]
+BCD1[2] <= bcd_decoder:u_bcd.BCD1[2]
+BCD1[3] <= bcd_decoder:u_bcd.BCD1[3]
+BCD2[0] <= bcd_decoder:u_bcd.BCD2[0]
+BCD2[1] <= bcd_decoder:u_bcd.BCD2[1]
+BCD2[2] <= bcd_decoder:u_bcd.BCD2[2]
+BCD2[3] <= bcd_decoder:u_bcd.BCD2[3]
+STATE_LED[0] <= fsm_controller:u_fsm.state_flag[0]
+STATE_LED[1] <= fsm_controller:u_fsm.state_flag[1]
+
+
+|TrafficLightSystem_SLOW|ClockDivider:u_div
+clk_in => clk_int.CLK
+clk_in => counter[0].CLK
+clk_in => counter[1].CLK
+clk_in => counter[2].CLK
+clk_in => counter[3].CLK
+clk_in => counter[4].CLK
+clk_in => counter[5].CLK
+clk_in => counter[6].CLK
+clk_in => counter[7].CLK
+clk_in => counter[8].CLK
+clk_in => counter[9].CLK
+clk_in => counter[10].CLK
+clk_in => counter[11].CLK
+clk_in => counter[12].CLK
+clk_in => counter[13].CLK
+clk_in => counter[14].CLK
+clk_in => counter[15].CLK
+clk_in => counter[16].CLK
+clk_in => counter[17].CLK
+clk_in => counter[18].CLK
+clk_in => counter[19].CLK
+clk_in => counter[20].CLK
+clk_in => counter[21].CLK
+clk_in => counter[22].CLK
+clk_in => counter[23].CLK
+clk_in => counter[24].CLK
+reset => clk_int.ACLR
+reset => counter[0].ACLR
+reset => counter[1].ACLR
+reset => counter[2].ACLR
+reset => counter[3].ACLR
+reset => counter[4].ACLR
+reset => counter[5].ACLR
+reset => counter[6].ACLR
+reset => counter[7].ACLR
+reset => counter[8].ACLR
+reset => counter[9].ACLR
+reset => counter[10].ACLR
+reset => counter[11].ACLR
+reset => counter[12].ACLR
+reset => counter[13].ACLR
+reset => counter[14].ACLR
+reset => counter[15].ACLR
+reset => counter[16].ACLR
+reset => counter[17].ACLR
+reset => counter[18].ACLR
+reset => counter[19].ACLR
+reset => counter[20].ACLR
+reset => counter[21].ACLR
+reset => counter[22].ACLR
+reset => counter[23].ACLR
+reset => counter[24].ACLR
+clk_out <= clk_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TrafficLightSystem_SLOW|Debouncer_FAST:u_db
+clk => q.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => s1.CLK
+clk => s0.CLK
+reset => q.ACLR
+reset => cnt[0].ACLR
+reset => cnt[1].ACLR
+reset => s1.ACLR
+reset => s0.ACLR
+noisy_in => s0.DATAIN
+clean_out <= q.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TrafficLightSystem_SLOW|FSM_Controller:u_fsm
+clk => rstS_pulse.CLK
+clk => rstM_pulse.CLK
+clk => ycnt[0].CLK
+clk => ycnt[1].CLK
+clk => ycnt[2].CLK
+clk => ycnt[3].CLK
+clk => prev~1.DATAIN
+clk => ps~1.DATAIN
+reset => rstS_pulse.PRESET
+reset => rstM_pulse.PRESET
+reset => ycnt[0].ACLR
+reset => ycnt[1].ACLR
+reset => ycnt[2].ACLR
+reset => ycnt[3].ACLR
+reset => prev~3.DATAIN
+reset => ps~3.DATAIN
+SSCS => process_1.IN0
+M_done => process_1.IN1
+S_done => Selector3.IN2
+S_done => Selector2.IN1
+MSTL[0] <= MSTL[0].DB_MAX_OUTPUT_PORT_TYPE
+MSTL[1] <= MSTL[1].DB_MAX_OUTPUT_PORT_TYPE
+MSTL[2] <= MSTL.DB_MAX_OUTPUT_PORT_TYPE
+SSTL[0] <= SSTL[0].DB_MAX_OUTPUT_PORT_TYPE
+SSTL[1] <= SSTL[1].DB_MAX_OUTPUT_PORT_TYPE
+SSTL[2] <= MSTL.DB_MAX_OUTPUT_PORT_TYPE
+enable_M <= enable_M.DB_MAX_OUTPUT_PORT_TYPE
+enable_S <= enable_S.DB_MAX_OUTPUT_PORT_TYPE
+reset_M <= rstM_pulse.DB_MAX_OUTPUT_PORT_TYPE
+reset_S <= rstS_pulse.DB_MAX_OUTPUT_PORT_TYPE
+state_dbg[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+state_dbg[1] <= state_dbg[1].DB_MAX_OUTPUT_PORT_TYPE
+state_flag[0] <= ns.DB_MAX_OUTPUT_PORT_TYPE
+state_flag[1] <= enable_M.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TrafficLightSystem_SLOW|MainCounter:u_mc
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+reset => cnt[0].ACLR
+reset => cnt[1].ACLR
+reset => cnt[2].ACLR
+reset => cnt[3].ACLR
+enable => cnt[3].ENA
+enable => cnt[2].ENA
+enable => cnt[1].ENA
+enable => cnt[0].ENA
+limit[0] => LessThan0.IN4
+limit[0] => Equal0.IN3
+limit[1] => LessThan0.IN3
+limit[1] => Equal0.IN2
+limit[2] => LessThan0.IN2
+limit[2] => Equal0.IN1
+limit[3] => LessThan0.IN1
+limit[3] => Equal0.IN0
+count[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+done <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TrafficLightSystem_SLOW|SideCounter:u_sc
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+reset => cnt[0].ACLR
+reset => cnt[1].ACLR
+reset => cnt[2].ACLR
+reset => cnt[3].ACLR
+enable => cnt[3].ENA
+enable => cnt[2].ENA
+enable => cnt[1].ENA
+enable => cnt[0].ENA
+limit[0] => Equal0.IN3
+limit[1] => Equal0.IN2
+limit[2] => Equal0.IN1
+limit[3] => Equal0.IN0
+count[0] <= cnt[0].DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= cnt[1].DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= cnt[2].DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= cnt[3].DB_MAX_OUTPUT_PORT_TYPE
+done <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TrafficLightSystem_SLOW|BCD_Decoder:u_bcd
+value[0] => LessThan0.IN8
+value[0] => BCD2[0].DATAIN
+value[1] => LessThan0.IN7
+value[1] => Add0.IN6
+value[1] => ones.DATAA
+value[2] => LessThan0.IN6
+value[2] => Add0.IN5
+value[2] => ones.DATAA
+value[3] => LessThan0.IN5
+value[3] => Add0.IN4
+value[3] => ones.DATAA
+BCD1[0] <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+BCD1[1] <= <GND>
+BCD1[2] <= <GND>
+BCD1[3] <= <GND>
+BCD2[0] <= value[0].DB_MAX_OUTPUT_PORT_TYPE
+BCD2[1] <= ones.DB_MAX_OUTPUT_PORT_TYPE
+BCD2[2] <= ones.DB_MAX_OUTPUT_PORT_TYPE
+BCD2[3] <= ones.DB_MAX_OUTPUT_PORT_TYPE
+
+

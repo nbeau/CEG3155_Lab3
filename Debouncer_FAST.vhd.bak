@@ -1,0 +1,38 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Debouncer_FAST is
+  port (
+    clk       : in  std_logic;
+    reset     : in  std_logic;
+    noisy_in  : in  std_logic;
+    clean_out : out std_logic
+  );
+end entity;
+
+architecture rtl of Debouncer_FAST is
+  signal s0, s1 : std_logic := '0';
+  signal cnt    : unsigned(2 downto 0) := (others=>'0');  -- 8 个周期确认
+  signal q      : std_logic := '0';
+begin
+  process(clk, reset)
+  begin
+    if reset='1' then
+      s0<='0'; s1<='0'; cnt<=(others=>'0'); q<='0';
+    elsif rising_edge(clk) then
+      s0 <= noisy_in;
+      s1 <= s0;
+      if s1 = q then
+        cnt <= (others=>'0');
+      else
+        cnt <= cnt + 1;
+        if cnt = "111" then
+          q <= s1;
+          cnt <= (others=>'0');
+        end if;
+      end if;
+    end if;
+  end process;
+  clean_out <= q;
+end architecture;

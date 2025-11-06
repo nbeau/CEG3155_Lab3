@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity StateFlag2bit is
+  port (
+    clk        : in  std_logic;
+    reset_n    : in  std_logic;                 -- 同步或异步按你工程风格改
+    A          : in  std_logic;                 -- 由你定义/连线
+    B          : in  std_logic;                 -- 由你定义/连线
+    state_flag : out std_logic_vector(1 downto 0)  -- {y1, y0}
+  );
+end entity;
+
+architecture rtl of StateFlag2bit is
+  signal y1, y0 : std_logic;    -- 当前状态位(寄存)
+  signal Y1, Y0 : std_logic;    -- 下一状态位(组合)
+begin
+  -- 你的表达式：
+  -- Y1 = y1 A' + y0 A
+  -- Y0 = y0 A' + y1' y0 + y1' A B
+  Y1 <= (y1 and (not A)) or (y0 and A);
+  Y0 <= (y0 and (not A)) or ((not y1) and y0) or ((not y1) and A and B);
+
+  -- 时序寄存
+  process(clk, reset_n)
+  begin
+    if reset_n = '0' then
+      y1 <= '0';  -- MG=00
+      y0 <= '0';
+    elsif rising_edge(clk) then
+      y1 <= Y1;
+      y0 <= Y0;
+    end if;
+  end process;
+
+  state_flag <= y1 & y0;  -- 输出二进制状态
+end architecture;

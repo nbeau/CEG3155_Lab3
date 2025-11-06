@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'GClock'
+Slack : -3.042
+TNS   : -47.076
+
+Type  : Slow 1200mV 85C Model Setup 'ClockDivider:u_div|clk_int'
+Slack : -2.037
+TNS   : -32.266
+
+Type  : Slow 1200mV 85C Model Hold 'GClock'
+Slack : -0.308
+TNS   : -0.308
+
+Type  : Slow 1200mV 85C Model Hold 'ClockDivider:u_div|clk_int'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'ClockDivider:u_div|clk_int'
+Slack : -0.524
+TNS   : -4.040
+
+Type  : Slow 1200mV 85C Model Removal 'ClockDivider:u_div|clk_int'
+Slack : 0.996
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GClock'
+Slack : -3.000
+TNS   : -36.410
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ClockDivider:u_div|clk_int'
+Slack : -1.285
+TNS   : -34.695
+
+Type  : Slow 1200mV 0C Model Setup 'GClock'
+Slack : -2.729
+TNS   : -39.952
+
+Type  : Slow 1200mV 0C Model Setup 'ClockDivider:u_div|clk_int'
+Slack : -1.753
+TNS   : -26.929
+
+Type  : Slow 1200mV 0C Model Hold 'GClock'
+Slack : -0.245
+TNS   : -0.245
+
+Type  : Slow 1200mV 0C Model Hold 'ClockDivider:u_div|clk_int'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'ClockDivider:u_div|clk_int'
+Slack : -0.366
+TNS   : -2.808
+
+Type  : Slow 1200mV 0C Model Removal 'ClockDivider:u_div|clk_int'
+Slack : 0.905
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GClock'
+Slack : -3.000
+TNS   : -36.410
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ClockDivider:u_div|clk_int'
+Slack : -1.285
+TNS   : -34.695
+
+Type  : Fast 1200mV 0C Model Setup 'GClock'
+Slack : -0.987
+TNS   : -10.698
+
+Type  : Fast 1200mV 0C Model Setup 'ClockDivider:u_div|clk_int'
+Slack : -0.473
+TNS   : -4.761
+
+Type  : Fast 1200mV 0C Model Hold 'GClock'
+Slack : -0.367
+TNS   : -0.367
+
+Type  : Fast 1200mV 0C Model Hold 'ClockDivider:u_div|clk_int'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'ClockDivider:u_div|clk_int'
+Slack : 0.232
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'ClockDivider:u_div|clk_int'
+Slack : 0.471
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GClock'
+Slack : -3.000
+TNS   : -30.599
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ClockDivider:u_div|clk_int'
+Slack : -1.000
+TNS   : -27.000
+
+------------------------------------------------------------

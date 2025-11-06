@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ClockDivider_FAST is
+  port (
+    clk_in  : in  std_logic;
+    reset   : in  std_logic;
+    clk_out : out std_logic
+  );
+end entity;
+
+architecture rtl of ClockDivider_FAST is
+  signal q : std_logic := '0';
+begin
+  process(clk_in, reset)
+  begin
+    if reset='1' then
+      q <= '0';
+    elsif rising_edge(clk_in) then
+      q <= not q;
+    end if;
+  end process;
+  clk_out <= q;
+end architecture;

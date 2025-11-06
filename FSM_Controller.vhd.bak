@@ -1,0 +1,64 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity FSM_Controller is
+  port (
+    clk    : in  std_logic;
+    reset  : in  std_logic;
+    SSCS   : in  std_logic;
+    MSTL   : out std_logic_vector(2 downto 0);
+    SSTL   : out std_logic_vector(2 downto 0)
+  );
+end entity FSM_Controller;
+
+architecture Behavioral of FSM_Controller is
+  signal state, next_state : std_logic_vector(3 downto 0) := "0001";
+  constant L_G : std_logic_vector(2 downto 0) := "001";
+  constant L_Y : std_logic_vector(2 downto 0) := "010";
+  constant L_R : std_logic_vector(2 downto 0) := "100";
+begin
+  process(clk, reset)
+  begin
+    if reset = '1' then
+      state <= "0001";
+    elsif rising_edge(clk) then
+      state <= next_state;
+    end if;
+  end process;
+
+  process(state, SSCS)
+  begin
+    case state is
+      when "0001" =>
+        if SSCS = '0' then
+          next_state <= "0001";
+        else
+          next_state <= "0010";
+        end if;
+      when "0010" =>
+        next_state <= "0100";
+      when "0100" =>
+        next_state <= "1000";
+      when "1000" =>
+        next_state <= "0001";
+      when others =>
+        next_state <= "0001";
+    end case;
+  end process;
+
+  process(state)
+  begin
+    case state is
+      when "0001" =>
+        MSTL <= L_G; SSTL <= L_R;
+      when "0010" =>
+        MSTL <= L_Y; SSTL <= L_R;
+      when "0100" =>
+        MSTL <= L_R; SSTL <= L_G;
+      when "1000" =>
+        MSTL <= L_R; SSTL <= L_Y;
+      when others =>
+        MSTL <= L_R; SSTL <= L_R;
+    end case;
+  end process;
+end architecture Behavioral;

@@ -1,0 +1,14 @@
+
+State Machine - |TrafficLightSystem_SLOW|FSM_Controller:u_fsm|prev
+Name prev.S3_SY prev.S2_SG prev.S1_MY prev.S0_MG 
+prev.S0_MG 0 0 0 0 
+prev.S1_MY 0 0 1 1 
+prev.S2_SG 0 1 0 1 
+prev.S3_SY 1 0 0 1 
+
+State Machine - |TrafficLightSystem_SLOW|FSM_Controller:u_fsm|ps
+Name ps.S3_SY ps.S2_SG ps.S1_MY ps.S0_MG 
+ps.S0_MG 0 0 0 0 
+ps.S1_MY 0 0 1 1 
+ps.S2_SG 0 1 0 1 
+ps.S3_SY 1 0 0 1 

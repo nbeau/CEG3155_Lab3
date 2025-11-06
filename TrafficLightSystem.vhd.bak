@@ -1,0 +1,65 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity TrafficLightSystem is
+  port (
+    GClock  : in  std_logic;
+    GReset  : in  std_logic;
+    MSC     : in  std_logic_vector(3 downto 0);
+    SSC     : in  std_logic_vector(3 downto 0);
+    SSCS    : in  std_logic;
+    MSTL    : out std_logic_vector(2 downto 0);
+    SSTL    : out std_logic_vector(2 downto 0)
+  );
+end entity TrafficLightSystem;
+
+architecture Structural of TrafficLightSystem is
+  signal slow_clk : std_logic;
+  signal SSCS_clean : std_logic;
+  signal M_done, S_done : std_logic;
+  signal M_count, S_count : std_logic_vector(3 downto 0);
+begin
+  U1: entity work.ClockDivider
+    port map(
+      clk_in  => GClock,
+      reset   => GReset,
+      clk_out => slow_clk
+    );
+
+  U2: entity work.Debouncer
+    port map(
+      clk       => slow_clk,
+      reset     => GReset,
+      noisy_in  => SSCS,
+      clean_out => SSCS_clean
+    );
+
+  U3: entity work.MainCounter
+    port map(
+      clk    => slow_clk,
+      reset  => GReset,
+      enable => '1',
+      limit  => MSC,
+      count  => M_count,
+      done   => M_done
+    );
+
+  U4: entity work.SideCounter
+    port map(
+      clk    => slow_clk,
+      reset  => GReset,
+      enable => '1',
+      limit  => SSC,
+      count  => S_count,
+      done   => S_done
+    );
+
+  U5: entity work.FSM_Controller
+    port map(
+      clk   => slow_clk,
+      reset => GReset,
+      SSCS  => SSCS_clean,
+      MSTL  => MSTL,
+      SSTL  => SSTL
+    );
+end architecture Structural;

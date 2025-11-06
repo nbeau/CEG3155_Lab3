@@ -1,0 +1,373 @@
+Simulator report for CEG3155_Lab3_qsim
+Wed Nov 05 21:07:16 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 800.0 ns     ;
+; Simulation Netlist Size     ; 176 nodes    ;
+; Simulation Coverage         ;      78.41 % ;
+; Total Number of Transitions ; 7680         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                               ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                             ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                          ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                 ;               ;
+; Vector input source                                                                        ; C:/Users/xzhou172/Desktop/CEG3155_Lab3/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                  ; On            ;
+; Check outputs                                                                              ; Off                                                 ; Off           ;
+; Report simulation coverage                                                                 ; On                                                  ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                  ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                  ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                  ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                 ; Off           ;
+; Detect glitches                                                                            ; Off                                                 ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                 ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                 ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                 ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                 ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                  ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                          ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                 ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                 ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport                                           ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport                                           ; Transport     ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      78.41 % ;
+; Total nodes checked                                 ; 176          ;
+; Total output ports checked                          ; 176          ;
+; Total output ports with complete 1/0-value coverage ; 138          ;
+; Total output ports with no 1/0-value coverage       ; 33           ;
+; Total output ports with no 1-value coverage         ; 38           ;
+; Total output ports with no 0-value coverage         ; 33           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                          ;
++-----------------------------------------------------------------+-----------------------------------------------------------------+------------------+
+; Node Name                                                       ; Output Port Name                                                ; Output Port Type ;
++-----------------------------------------------------------------+-----------------------------------------------------------------+------------------+
+; |top1|CLK                                                       ; |top1|CLK                                                       ; out              ;
+; |top1|SSCS                                                      ; |top1|SSCS                                                      ; out              ;
+; |top1|BCD2[2]                                                   ; |top1|BCD2[2]                                                   ; pin_out          ;
+; |top1|BCD2[1]                                                   ; |top1|BCD2[1]                                                   ; pin_out          ;
+; |top1|BCD2[0]                                                   ; |top1|BCD2[0]                                                   ; pin_out          ;
+; |top1|MSTL[2]                                                   ; |top1|MSTL[2]                                                   ; pin_out          ;
+; |top1|MSTL[1]                                                   ; |top1|MSTL[1]                                                   ; pin_out          ;
+; |top1|MSTL[0]                                                   ; |top1|MSTL[0]                                                   ; pin_out          ;
+; |top1|SSTL[2]                                                   ; |top1|SSTL[2]                                                   ; pin_out          ;
+; |top1|SSTL[1]                                                   ; |top1|SSTL[1]                                                   ; pin_out          ;
+; |top1|SSTL[0]                                                   ; |top1|SSTL[0]                                                   ; pin_out          ;
+; |top1|STATE[1]                                                  ; |top1|STATE[1]                                                  ; pin_out          ;
+; |top1|STATE[0]                                                  ; |top1|STATE[0]                                                  ; pin_out          ;
+; |top1|TrafficLightSystem:inst|disp_count~1                      ; |top1|TrafficLightSystem:inst|disp_count~1                      ; out              ;
+; |top1|TrafficLightSystem:inst|disp_count~2                      ; |top1|TrafficLightSystem:inst|disp_count~2                      ; out              ;
+; |top1|TrafficLightSystem:inst|disp_count~3                      ; |top1|TrafficLightSystem:inst|disp_count~3                      ; out              ;
+; |top1|TrafficLightSystem:inst|disp_count[2]                     ; |top1|TrafficLightSystem:inst|disp_count[2]                     ; out              ;
+; |top1|TrafficLightSystem:inst|disp_count[1]                     ; |top1|TrafficLightSystem:inst|disp_count[1]                     ; out              ;
+; |top1|TrafficLightSystem:inst|disp_count[0]                     ; |top1|TrafficLightSystem:inst|disp_count[0]                     ; out              ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|BCD2[2]         ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|BCD2[2]         ; out              ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|BCD2[1]         ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|BCD2[1]         ; out              ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|cnt[2]           ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|cnt[2]           ; regout           ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|cnt[1]           ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|cnt[1]           ; regout           ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|cnt[0]           ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|cnt[0]           ; regout           ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt~0            ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt~0            ; out              ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt~1            ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt~1            ; out              ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt~2            ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt~2            ; out              ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt~3            ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt~3            ; out              ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt[2]           ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt[2]           ; regout           ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt[1]           ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt[1]           ; regout           ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt[0]           ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt[0]           ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~0  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~0  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~2       ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~2       ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~3       ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~3       ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~6       ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~6       ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~7       ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~7       ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~1  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~1  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~2  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~2  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~3  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~3  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~4  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~4  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|WideOr0      ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|WideOr0      ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~5  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~5  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~6  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~6  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|rstM_pulse~0 ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|rstM_pulse~0 ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|rstS_pulse~0 ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|rstS_pulse~0 ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps.S0_MG     ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps.S0_MG     ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps.S1_MY     ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps.S1_MY     ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps.S2_SG     ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps.S2_SG     ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps.S3_SY     ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps.S3_SY     ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev.S0_MG   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev.S0_MG   ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev.S1_MY   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev.S1_MY   ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev.S2_SG   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev.S2_SG   ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev.S3_SY   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev.S3_SY   ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt[1]      ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt[1]      ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt[0]      ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt[0]      ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|rstM_pulse   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|rstM_pulse   ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_1~0  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_1~0  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ns~1         ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ns~1         ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|SSTL[2]      ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|SSTL[2]      ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|enable_M     ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|enable_M     ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|enable_S     ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|enable_S     ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|rstS_pulse   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|rstS_pulse   ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev~0       ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev~0       ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps~0         ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps~0         ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~8  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~8  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~10 ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~10 ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~12 ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~12 ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~14 ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|process_0~14 ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev~5       ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev~5       ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|MSTL[0]      ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|MSTL[0]      ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|MSTL[1]      ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|MSTL[1]      ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|SSTL[0]      ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|SSTL[0]      ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|SSTL[1]      ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|SSTL[1]      ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps~5         ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps~5         ; out0             ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|q             ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|q             ; regout           ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|process_0~0   ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|process_0~0   ; out0             ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|q~0           ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|q~0           ; out              ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|cnt~0         ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|cnt~0         ; out              ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|cnt~1         ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|cnt~1         ; out              ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|cnt~2         ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|cnt~2         ; out              ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|cnt~3         ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|cnt~3         ; out              ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|s0            ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|s0            ; regout           ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|s1            ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|s1            ; regout           ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|cnt[1]        ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|cnt[1]        ; regout           ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|cnt[0]        ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|cnt[0]        ; regout           ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|q~1           ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|q~1           ; out              ;
+; |top1|TrafficLightSystem:inst|ClockDivider_FAST:u_div|q         ; |top1|TrafficLightSystem:inst|ClockDivider_FAST:u_div|q         ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector0~0  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector0~0  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector0~1  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector0~1  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector0~2  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector0~2  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector1~0  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector1~0  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector1~1  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector1~1  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector1~2  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector1~2  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector2~0  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector2~0  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector2~1  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector2~1  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector2~2  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector2~2  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector3~0  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector3~0  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector3~1  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector3~1  ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector3~2  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Selector3~2  ; out0             ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|LessThan0~0     ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|LessThan0~0     ; out0             ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|LessThan0~1     ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|LessThan0~1     ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~0      ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~0      ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~2      ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~2      ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~3      ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~3      ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~4      ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~4      ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~5      ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~5      ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~6      ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~6      ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~7      ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~7      ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~8      ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~8      ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~10     ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~10     ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~12     ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~12     ; out0             ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|Add0~0          ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|Add0~0          ; out0             ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|Add0~1          ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|Add0~1          ; out0             ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|Add0~3          ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|Add0~3          ; out0             ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Add0~0           ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Add0~0           ; out0             ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Add0~1           ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Add0~1           ; out0             ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Add0~2           ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Add0~2           ; out0             ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Add0~3           ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Add0~3           ; out0             ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Add0~4           ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Add0~4           ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Add0~0           ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Add0~0           ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Add0~1           ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Add0~1           ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Add0~2           ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Add0~2           ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Add0~3           ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Add0~3           ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Add0~4           ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Add0~4           ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~0       ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~0       ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~1       ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~1       ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~2       ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~2       ; out0             ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|Add0~0        ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|Add0~0        ; out0             ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Equal0~0         ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Equal0~0         ; out0             ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Equal0~1         ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Equal0~1         ; out0             ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Equal0~2         ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Equal0~2         ; out0             ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Equal0~4         ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Equal0~4         ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Equal0~0         ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Equal0~0         ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Equal0~1         ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Equal0~1         ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Equal0~2         ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Equal0~2         ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Equal0~4         ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Equal0~4         ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Equal0~0     ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Equal0~0     ; out0             ;
+; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|Equal0~0      ; |top1|TrafficLightSystem:inst|Debouncer_FAST:u_db|Equal0~0      ; out0             ;
++-----------------------------------------------------------------+-----------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                     ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; Node Name                                                   ; Output Port Name                                            ; Output Port Type ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; |top1|BCD1[3]                                               ; |top1|BCD1[3]                                               ; pin_out          ;
+; |top1|BCD1[2]                                               ; |top1|BCD1[2]                                               ; pin_out          ;
+; |top1|BCD1[1]                                               ; |top1|BCD1[1]                                               ; pin_out          ;
+; |top1|BCD1[0]                                               ; |top1|BCD1[0]                                               ; pin_out          ;
+; |top1|RST                                                   ; |top1|RST                                                   ; out              ;
+; |top1|MSC[3]                                                ; |top1|MSC[3]                                                ; out              ;
+; |top1|MSC[2]                                                ; |top1|MSC[2]                                                ; out              ;
+; |top1|MSC[1]                                                ; |top1|MSC[1]                                                ; out              ;
+; |top1|MSC[0]                                                ; |top1|MSC[0]                                                ; out              ;
+; |top1|SSC[3]                                                ; |top1|SSC[3]                                                ; out              ;
+; |top1|SSC[2]                                                ; |top1|SSC[2]                                                ; out              ;
+; |top1|SSC[1]                                                ; |top1|SSC[1]                                                ; out              ;
+; |top1|SSC[0]                                                ; |top1|SSC[0]                                                ; out              ;
+; |top1|BCD2[3]                                               ; |top1|BCD2[3]                                               ; pin_out          ;
+; |top1|TrafficLightSystem:inst|disp_count~0                  ; |top1|TrafficLightSystem:inst|disp_count~0                  ; out              ;
+; |top1|TrafficLightSystem:inst|disp_count[3]                 ; |top1|TrafficLightSystem:inst|disp_count[3]                 ; out              ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|BCD2[3]     ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|BCD2[3]     ; out              ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|cnt[3]       ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|cnt[3]       ; regout           ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt[3]       ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt[3]       ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~0   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~0   ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~1   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~1   ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~4   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~4   ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~5   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~5   ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt[3]  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt[3]  ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt[2]  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt[2]  ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev~1   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev~1   ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps~1     ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps~1     ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev~9   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|prev~9   ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps~9     ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ps~9     ; out0             ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|LessThan0~2 ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|LessThan0~2 ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~1  ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~1  ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~9  ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~9  ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~11 ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~11 ; out0             ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|Add0~2      ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|Add0~2      ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~3   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~3   ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~4   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~4   ; out0             ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Equal0~3     ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Equal0~3     ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Equal0~3     ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Equal0~3     ; out0             ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                     ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; Node Name                                                   ; Output Port Name                                            ; Output Port Type ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+; |top1|BCD1[3]                                               ; |top1|BCD1[3]                                               ; pin_out          ;
+; |top1|BCD1[2]                                               ; |top1|BCD1[2]                                               ; pin_out          ;
+; |top1|BCD1[1]                                               ; |top1|BCD1[1]                                               ; pin_out          ;
+; |top1|BCD1[0]                                               ; |top1|BCD1[0]                                               ; pin_out          ;
+; |top1|MSC[3]                                                ; |top1|MSC[3]                                                ; out              ;
+; |top1|MSC[2]                                                ; |top1|MSC[2]                                                ; out              ;
+; |top1|MSC[1]                                                ; |top1|MSC[1]                                                ; out              ;
+; |top1|MSC[0]                                                ; |top1|MSC[0]                                                ; out              ;
+; |top1|SSC[3]                                                ; |top1|SSC[3]                                                ; out              ;
+; |top1|SSC[2]                                                ; |top1|SSC[2]                                                ; out              ;
+; |top1|SSC[1]                                                ; |top1|SSC[1]                                                ; out              ;
+; |top1|SSC[0]                                                ; |top1|SSC[0]                                                ; out              ;
+; |top1|BCD2[3]                                               ; |top1|BCD2[3]                                               ; pin_out          ;
+; |top1|TrafficLightSystem:inst|disp_count~0                  ; |top1|TrafficLightSystem:inst|disp_count~0                  ; out              ;
+; |top1|TrafficLightSystem:inst|disp_count[3]                 ; |top1|TrafficLightSystem:inst|disp_count[3]                 ; out              ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|BCD2[3]     ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|BCD2[3]     ; out              ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|cnt[3]       ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|cnt[3]       ; regout           ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt[3]       ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|cnt[3]       ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~0   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~0   ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~1   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~1   ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~4   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~4   ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~5   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt~5   ; out              ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt[3]  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt[3]  ; regout           ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt[2]  ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|ycnt[2]  ; regout           ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|LessThan0~2 ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|LessThan0~2 ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~1  ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~1  ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~9  ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~9  ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~11 ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|LessThan0~11 ; out0             ;
+; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|Add0~2      ; |top1|TrafficLightSystem:inst|BCD_Decoder:u_bcd|Add0~2      ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~3   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~3   ; out0             ;
+; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~4   ; |top1|TrafficLightSystem:inst|FSM_Controller:u_fsm|Add0~4   ; out0             ;
+; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Equal0~3     ; |top1|TrafficLightSystem:inst|SideCounter:u_sc|Equal0~3     ; out0             ;
+; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Equal0~3     ; |top1|TrafficLightSystem:inst|MainCounter:u_mc|Equal0~3     ; out0             ;
++-------------------------------------------------------------+-------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Nov 05 21:07:14 2025
+Info: Command: quartus_sim --simulation_results_format=VWF CEG3155_Lab3 -c CEG3155_Lab3_qsim
+Info (324025): Using vector source file "C:/Users/xzhou172/Desktop/CEG3155_Lab3/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      78.41 %
+Info (328052): Number of transitions in simulation is 7680
+Info (324045): Vector file CEG3155_Lab3_qsim.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4477 megabytes
+    Info: Processing ended: Wed Nov 05 21:07:16 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
